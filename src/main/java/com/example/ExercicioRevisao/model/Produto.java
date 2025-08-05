@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Data // Lombock, @Data cria toda a contrução da classe
 @Entity
 @Table(name = "TDS_TB_FERRAMENTAS")
 public class Produto {
