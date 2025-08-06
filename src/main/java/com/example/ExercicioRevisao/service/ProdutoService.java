@@ -36,7 +36,7 @@ public class ProdutoService {
         produtoExistente.setTamanho(novoProduto.getTamanho());
         produtoExistente.setPreco(novoProduto.getPreco());
 
-        return produtoRepository.save(brinquedo);
+        return produtoRepository.save(produtoExistente);
     }
 
     public boolean deletarProduto(Long id){
