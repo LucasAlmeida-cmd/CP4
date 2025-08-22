@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/produtos")
@@ -58,5 +59,19 @@ public class ProdutoController {
     public ResponseEntity<Produto> deletarPorId(@PathVariable Long id){
         produtoService.deletarProduto(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<EntityModel<Produto>> atualizarParcialmente(
+            @PathVariable Long id,
+            @RequestBody Map<String, Object> updates) {
+        try {
+            Produto produtoAtualizado = produtoService.atualizarParcialmente(id, updates);
+            return ResponseEntity.ok(produtoAssembler.toModel(produtoAtualizado));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().build();
+        } catch (ProdutoNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
