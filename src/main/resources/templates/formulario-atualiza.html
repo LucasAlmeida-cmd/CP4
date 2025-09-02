@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar Pátio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+<h1>Atualizar Pátio</h1>
+
+
+<form th:action="@{/produto/editar/{id}(id=${produto.id})}"
+      th:object="${produto}"
+      method="post">
+    <input type="hidden" name="_method" value="put" />
+
+    <label>Nome: </label>
+    <input type="text" th:field="*{nome}" />
+
+    <label>Tipo:</label>
+    <input type="text" th:field="*{tipo}"  />
+
+    <label>Classificação:</label>
+    <input type="text" th:field="*{classificacao}"  />
+
+    <label>Tamanho:</label>
+    <input type="number" th:field="*{tamanho}"  />
+
+    <label>Preço:</label>
+    <input type="number" th:field="*{preco}" step="any" min="0"  />
+
+    <button type="submit">Atualizar</button>
+</form>
+
+</body>
+</html>
