@@ -91,4 +91,12 @@ public class ProdutoService {
         }
         throw new IllegalArgumentException("Tipo de valor não suportado para conversão: " + value.getClass());
     }
+
+    public Produto findAllByNome(String nome) {
+        return produtoRepository.findAllByNome(nome);
+    }
+
+    public Optional<Produto> findById(Long id) {
+        return produtoRepository.findById(id);
+    }
 }
