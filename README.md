@@ -1,4 +1,4 @@
-# Exercício de Revisão - CP 4.1
+# Exercício de Revisão - CP 4
 Este projeto consiste em uma aplicação RESTful desenvolvida com **Spring Boot** (configurada para Maven), utilizando a linguagem **Java** e com dependências como **Lombok**. A API permite a gestão de ferramentas e acessórios (como alicates, martelos, furadeiras, etc.), realizando operações básicas de **CRUD** (Create, Read, Update e Delete).
 
 
@@ -32,4 +32,5 @@ Este projeto consiste em uma aplicação RESTful desenvolvida com **Spring Boot*
 ![imagem](https://github.com/user-attachments/assets/e1ef1ad5-39f8-452c-bbe2-909f55fb74a2)
 
 ## Links
-- Deploy: https://cp4-1.onrender.com
+
+- Link Video: https://fiapcom-my.sharepoint.com/:v:/g/personal/rm557569_fiap_com_br/EUjvK7CvJz1Iul8wfjBf_FEBnqd4g5bcPcXorXXv44Vjbw?e=jX1sLf&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
