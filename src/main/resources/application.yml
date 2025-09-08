@@ -1,17 +1,17 @@
 ---
 server:
-  port: 8081
+  port: 8080
   error:
     include-message: always
     include-binding-errors: always
 
 spring:
   datasource:
-    url: postgresql://admin:WLvqDnkIXrwYY2cXMS4xyYVHlcGjclnO@dpg-d2vc1vndiees73dv7nj0-a/cp4
+    url: jdbc:postgresql://dpg-d2vc1vndiees73dv7nj0-a/cp4
     password: WLvqDnkIXrwYY2cXMS4xyYVHlcGjclnO
     username: admin
   mvc:
-    hidden method:
+    hiddenmethod:
       filter:
         enabled: true
 
