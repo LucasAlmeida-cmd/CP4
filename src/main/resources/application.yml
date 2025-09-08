@@ -7,9 +7,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cp4
-    password: admin
-    username: postgres
+    url: postgresql://admin:WLvqDnkIXrwYY2cXMS4xyYVHlcGjclnO@dpg-d2vc1vndiees73dv7nj0-a/cp4
+    password: WLvqDnkIXrwYY2cXMS4xyYVHlcGjclnO
+    username: admin
   mvc:
     hidden method:
       filter:
