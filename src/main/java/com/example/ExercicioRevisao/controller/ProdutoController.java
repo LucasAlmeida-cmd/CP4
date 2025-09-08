@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("/produto")
@@ -24,8 +23,9 @@ public class ProdutoController {
     @GetMapping
     public String listaTodosProdutos(Model model){
         model.addAttribute("produtos", produtoService.getAllProdutos());
-        return "index";
+        return "index";  // sem "templates/"
     }
+
 
 
     @GetMapping("/novo")
@@ -54,7 +54,7 @@ public class ProdutoController {
         Produto produto = produtoService.findById(id)
                 .orElseThrow(() -> new ProdutoNotFoundException(id));
         model.addAttribute("produto", produto);
-        return "formulario-atualizar";
+        return "formulario-atualiza";
     }
 
     @PutMapping("/editar/{id}")
