@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Lista de Produtos</h1>
+<div class="container-link">
+    <a href="/produto/novo">Adicionar Novo Produto</a>
+</div>
+
+<div>
+    <h1>Buscar Por Nome:</h1>
+    <form th:action="@{/produto/buscarPorNome}" method="get">
+        <input type="text" name="nome" placeholder="Digite o Nome:"/>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+
+<ul>
+    <li th:each="produto : ${produtos}">
+        <h2 th:text="${produto.getNome()}">Nome do Produto:</h2>
+        <p th:text="${produto.getClassificacao()}">Classificação do Produto:</p>
+        <p th:text="${produto.getTipo()}">Tipo do Produto:</p>
+        <p th:text="${produto.getTamanho()}">Tamanho do Produto:</p>
+        <p th:text="${produto.getPreco()}">Preço do Produto:</p>
+
+
+        <form th:action="@{'/produto/editar/' + ${produto.id}}" method="get" style="display:inline;">
+            <button type="submit">Atualizar</button>
+        </form>
+
+        <form th:action="@{'/produto/' + ${produto.id}}"
+              method="post" style="display:inline;">
+            <input type="hidden" name="_method" value="delete" />
+            <button type="submit" onclick="return confirm('Tem certeza que deseja deletar?')">Deletar</button>
+        </form>
+    </li>
+</ul>
+</body>
+</html>
