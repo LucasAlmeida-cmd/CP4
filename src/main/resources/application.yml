@@ -7,8 +7,8 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d2vc1vndiees73dv7nj0-a/cp4
-    password: WLvqDnkIXrwYY2cXMS4xyYVHlcGjclnO
+    url: jdbc:postgresql://dpg-d3a6uiur433s73d3emi0-a/dbname_wspf
+    password: QxzvGdFF0PKvwnhCPxuiG3YoRVe1qpYB
     username: admin
   mvc:
     hiddenmethod:
